@@ -9,6 +9,19 @@ body{
 h1{
   margin-top:50px;
 }
+.addItems{
+ 
+  width: 25%;
+  height:28px;
+  background-color: white;
+  margin: auto;
+  display: flex;
+}
+.input{
+  height: 20px;
+  width: 95%;
+  border: none;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
