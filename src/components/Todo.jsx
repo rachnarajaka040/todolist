@@ -9,14 +9,8 @@ function Todo() {
     const dispatch = useDispatch();
     return (
         <>
-        <div>
+        <div className='maindiv'>
             <h1>Add Your List Here ✌️</h1>
-
-            
-
-
-
-
             <div className="addItems">
                 <input type="text" className="input" placeholder=" ✍️ type the text" value={inputdata} onChange={(event) => setinputdata(event.target.value)}></input>
                 <i className="fa fa-plus add-btn" style={{ color: "red" }} onClick={() => dispatch(addTodo(inputdata), setinputdata(''))}></i>
@@ -42,7 +36,7 @@ function Todo() {
             </div>
            
           </div>
-        <button className='btn'  data-sm-link-text="remove All" onClick={()=>dispatch(removeTodo())}><span>Check List</span></button>
+        <button className='btn' hover="CLICK ME" data-sm-link-text="remove All" onClick={()=>dispatch(removeTodo())}><span>Check List</span></button>
         </>
     )
 }
