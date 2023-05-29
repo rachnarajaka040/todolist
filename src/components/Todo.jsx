@@ -8,6 +8,7 @@ function Todo() {
     const list = useSelector((state) => state.todoReducers.list);
     const dispatch = useDispatch();
     return (
+        <>
         <div>
             <h1>Add Your List Here ✌️</h1>
 
@@ -25,26 +26,24 @@ function Todo() {
                 {
                     list.map((ele) => {
                         return (
-                            <div className='eachItems' key={ele.id}>
+                            <div className='eachItems' key={ele.id} style={{display:"flex"}}>
                                 <h3 className='h3' style={{ marginBottom: "60px" }}>{ele.data}</h3>
                                 <div className='todo-btn'>
                                  <i className="far fa-trash-alt  add-btn" title="Delete Item" style={{ color: "red" }} onClick={() => dispatch(deletTodo(ele.id))}></i>
 
                                 </div>
                             </div>
+                            
                         )
 
                     })
                 }
 
             </div>
-            
-           <br></br>
-           <div >
-             <button className='addmultipleItems' data-sm-link-text="remove All" onClick={()=>dispatch(removeTodo())}><span>Check List</span></button>
-             </div>
-
-        </div>
+           
+          </div>
+        <button className='btn'  data-sm-link-text="remove All" onClick={()=>dispatch(removeTodo())}><span>Check List</span></button>
+        </>
     )
 }
 
