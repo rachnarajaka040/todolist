@@ -36,7 +36,7 @@ function Todo() {
             </div>
            
           </div>
-        <button className='btn' hover="CLICK ME" data-sm-link-text="remove All" onClick={()=>dispatch(removeTodo())}><span>Check List</span></button>
+        <button className='btn'  onClick={()=>dispatch(removeTodo())}><span>Remove</span></button>
         </>
     )
 }
